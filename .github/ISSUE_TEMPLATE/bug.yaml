@@ -1,0 +1,52 @@
+name: Bug Report
+description: File a bug/issue
+labels: [kind/bug]
+body:
+- type: textarea
+  attributes:
+    label: What happened?
+    description: Please describe precisely what happend
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: What you expected to happen?
+    description: Please describe what you expected to happen
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: How to reproduce it?
+    description: Please describe as minimally and precisely as possible
+    value: |
+      1.
+      2.
+      3.
+      ...
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Anything else we need to know?
+  validations:
+    required: false
+- type: dropdown
+  attributes:
+    label: Cloud provider or hardware configuration
+    multiple: true
+    options:
+    - AWS
+    - GCP
+    - Azure
+    - Other
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: Kubernetes version
+    multiple: true
+    options:
+    - v1.21
+    - v1.20
+  validations:
+    required: true
